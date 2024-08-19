@@ -3,35 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Robot Path Finder</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Private Web Browser</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        #browser-frame {
+            width: 100%;
+            height: 80vh;
+            border: 1px solid #ccc;
+            margin-top: 20px;
+        }
+        input, button {
+            padding: 10px;
+            margin: 5px;
+            font-size: 16px;
+        }
+    </style>
 </head>
 <body>
-    <div id="main-container">
-        <div id="left-panel">
-            <div id="grid-container"></div>
-            <br>
-            <br>
-            <div id="controls">
-                <button id="set-start">Set Start</button>
-                <button id="set-end">Set End</button>
-                <button id="set-obstacle">Set Obstacle</button>
-                <button id="set-gate-zone">Set Gate Zone</button>
-                <button id="set-last-gate-zone">Set Last Gate Zone</button>
-                <button id="calculate-route">Calculate Route</button>
-            </div>
-        </div>
-        <div id="right-panel">
-            <div id="route-tracking">
-                <h2>Route Tracking</h2>
-                <div id="route-list"></div>
-            </div>
-            <div id="console">
-                <h2>Console</h2>
-                <div id="console-output"></div>
-            </div>
-        </div>
+    <h1>Private Web Browser</h1>
+    <div>
+        <input type="text" id="url-input" placeholder="Enter URL" style="width: 60%;">
+        <button onclick="loadCloakedUrl()">Open Cloaked</button>
     </div>
-    <script src="script.js"></script>
+    <iframe id="browser-frame"></iframe>
+
+    <script>
+        async function loadCloakedUrl() {
+            const url = document.getElementById('url-input').value;
+            if (url) {
+                document.getElementById('browser-frame').src = `/cloaked-browse?url=${encodeURIComponent(url)}`;
+            } else {
+                alert("Please enter a valid URL.");
+            }
+        }
+    </script>
 </body>
 </html>
