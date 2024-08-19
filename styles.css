@@ -1,0 +1,97 @@
+#main-container {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+}
+
+#left-panel {
+    width: 66%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#grid-container {
+    display: grid;
+    grid-template-columns: 10px repeat(4, 50px 10px); /* 4 boxes + 5 vertical lines */
+    grid-template-rows: 10px repeat(5, 50px 10px); /* 5 boxes + 6 horizontal lines */
+    gap: 0;
+    position: relative;
+    margin-top: 20px;
+}
+
+#controls {
+    margin-top: 20px;
+}
+
+.grid-cell {
+    width: 50px;
+    height: 50px;
+    border: 1px solid #ccc;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    position: relative;
+    box-sizing: border-box;
+    grid-column: span 1;
+    grid-row: span 1;
+}
+
+.start { background-color: green; }
+.end { background-color: red; }
+.gate-zone { background-color: yellow; }
+.last-gate-zone { background-color: orange; }
+.obstacle { background-color: grey; }
+.path { background-color: blue; }
+
+.border-line {
+    background-color: #ccc;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.border-line.horizontal {
+    height: 10px;
+    width: 100%;
+}
+
+.border-line.vertical {
+    width: 10px;
+    height: 100%;
+}
+
+.border-line.clicked { background-color: grey; }
+.border-line.start { background-color: green; }
+
+#right-panel {
+    width: 34%;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+#route-tracking {
+    flex: 1;
+    margin-bottom: 20px;
+}
+
+#route-list {
+    height: 100%;
+    overflow-y: auto;
+    border: 1px solid #ccc;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+#console {
+    flex: 1;
+}
+
+#console-output {
+    height: 100%;
+    overflow-y: auto;
+    border: 1px solid #ccc;
+    padding: 10px;
+    box-sizing: border-box;
+}
