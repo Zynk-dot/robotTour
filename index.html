@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Robot Path Finder</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="main-container">
+        <div id="left-panel">
+            <div id="grid-container"></div>
+            <br>
+            <br>
+            <div id="controls">
+                <button id="set-start">Set Start</button>
+                <button id="set-end">Set End</button>
+                <button id="set-obstacle">Set Obstacle</button>
+                <button id="set-gate-zone">Set Gate Zone</button>
+                <button id="set-last-gate-zone">Set Last Gate Zone</button>
+                <button id="calculate-route">Calculate Route</button>
+            </div>
+        </div>
+        <div id="right-panel">
+            <div id="route-tracking">
+                <h2>Route Tracking</h2>
+                <div id="route-list"></div>
+            </div>
+            <div id="console">
+                <h2>Console</h2>
+                <div id="console-output"></div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
