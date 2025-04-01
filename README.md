@@ -80,6 +80,7 @@ open index.html  # Or use Live Server in VSCode
 
 I love AI, algorithms, and creative problem solving.  
 Feel free to **DM me on Discord**: `some1_lonely`  
+Or write an Email to me `kgao2472@gmail.com`
 Or check out my GitHub: [@Zynk-dot](https://github.com/Zynk-dot)
 
 ---
